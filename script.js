@@ -29,15 +29,20 @@ diceEl.classList.add('hidden');
 
 //(1) Rolling the dice functionality
 btnRoll.addEventListener('click', function () {
-    // 1. Start by generating a random dice roll
+    // A. Start by generating a random dice roll
 
-    const dice = Math.trunc(Math.random() * 6) + 1;
+    const dice = Math.floor(Math.random() * 6) + 1;
     // We are using dice for the number. The Dice number cannot be global variable. Each time we roll the dice, we need to generate a new number. 
-    // 2. Display the dice
+    // B. Display the dice
 
     diceEl.classList.remove('hidden');
     diceEl.src = `dice-${dice}.png`;
-    //3. Check for roll 1: If true, switch the enxt player
+    //C. Check for roll 1: If true, switch the enxt player
+    if (dice === !1) {              // Check if the roll is 1
+        console.log('Dice is number 1')
+    } else {
+        // Switch user to next player
+    }
 
 })
 
